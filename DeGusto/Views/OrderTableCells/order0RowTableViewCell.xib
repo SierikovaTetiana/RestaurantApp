@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="order0RowTableViewCell" selectionStyle="default" indentationWidth="10" rowHeight="113" id="KGk-i7-Jjw" customClass="order0RowTableViewCell" customModule="DeGusto" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="408" height="113"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="408" height="113"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="u8F-ON-fe8">
+                        <rect key="frame" x="0.0" y="0.0" width="408" height="114"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <segments>
+                            <segment title="Самовывоз"/>
+                            <segment title="Доставка"/>
+                        </segments>
+                        <connections>
+                            <action selector="takeAwayAction:" destination="KGk-i7-Jjw" eventType="valueChanged" id="MGJ-es-xIj"/>
+                        </connections>
+                    </segmentedControl>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="u8F-ON-fe8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="DMj-3x-T8a"/>
+                    <constraint firstAttribute="trailing" secondItem="u8F-ON-fe8" secondAttribute="trailing" id="SOC-Du-F9y"/>
+                    <constraint firstAttribute="bottom" secondItem="u8F-ON-fe8" secondAttribute="bottom" id="brS-Sr-bX1"/>
+                    <constraint firstItem="u8F-ON-fe8" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="nrS-L3-Krq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="takeAway" destination="u8F-ON-fe8" id="iiB-P1-Z23"/>
+            </connections>
+            <point key="canvasLocation" x="201.44927536231884" y="103.45982142857143"/>
+        </tableViewCell>
+    </objects>
+</document>

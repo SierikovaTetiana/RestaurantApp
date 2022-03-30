@@ -1,0 +1,6 @@
+framework module Pods_DeGusto {
+  umbrella header "Pods-DeGusto-umbrella.h"
+
+  export *
+  module * { export * }
+}
