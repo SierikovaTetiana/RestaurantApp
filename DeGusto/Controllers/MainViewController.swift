@@ -52,12 +52,12 @@ class MainViewController: UIViewController {
         table.dataSource = self
         table.register(UINib(nibName: "dishTableViewCell", bundle: nil), forCellReuseIdentifier: "dishCell")
         Database.database().reference().keepSynced(true)
-        authorizeUser()
         goToCart()
         addActionToGoToCartButton()
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        authorizeUser()
         netTester()
         getUserFavorites()
     }
@@ -241,9 +241,7 @@ class MainViewController: UIViewController {
                         }
                     }
                 }
-                if self.sections.count < 2 {
-                    self.getDataMenu()
-                }
+                self.getDataMenu()
                 self.getUserCart()
             }
         }
